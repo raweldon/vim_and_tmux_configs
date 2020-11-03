@@ -27,3 +27,21 @@ syntax enable
 colorscheme desert
 "set background=dark
 "colorscheme gruvbox
+
+" fzf
+set rtp+=/usr/local/opt/fzf
+
+set ruler
+
+" remap split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" highlight search
+set hlsearch
+
+" Mappings for compiling Latex file
+autocmd FileType tex nmap <buffer> <C-T> :!xelatex %<CR>
+autocmd FileType tex nmap <buffer> T :!open -a Skim %:r.pdf<CR><CR>
